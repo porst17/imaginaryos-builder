@@ -8,11 +8,10 @@ export DISK_IMG=$BUILD_DIR/imaginaryos.img
 export DISK_IMG_SIZE_MiB=$(( 10 * 1024 )) # 10 GiB
 
 # Partition target sizes (in MiB)
-export BIOS_GRUB_SIZE_MiB=1
 export ESP_SIZE_MiB=128
 export SYSTEM_SIZE_MiB=$(( 6 * 1024 ))
 export CONFIG_SIZE_MiB=128
-export DATA_SIZE=$(( 3 * 1024 ))
+export DATA_SIZE_MiB=$(( 3 * 1024 ))
 
 # Define mountpoints
 export ESP_MNT=/mnt/esp
