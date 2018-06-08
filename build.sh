@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -x
+set -e
 
 export SCRIPT_DIR="$( cd "$( echo "${BASH_SOURCE[0]%/*}/" )"; pwd )"
 export BUILD_DIR="$SCRIPT_DIR/build"
