@@ -13,6 +13,13 @@ export SYSTEM_SIZE_MiB=$(( 6 * 1024 ))
 export CONFIG_SIZE_MiB=128
 export DATA_SIZE_MiB=$(( 3 * 1024 ))
 
+# Partition numbers
+export BIOS_BOOT_PART_NR=1 # Keep this to 1
+export ESP_PART_NR=2
+export SYSTEM_PART_NR=3
+export CONFIG_PART_NR=4
+export DATA_PART_NR=5
+
 # Define mountpoints
 export ESP_MNT=/mnt/esp
 export SYSTEM_MNT=/mnt/system

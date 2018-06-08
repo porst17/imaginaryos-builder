@@ -7,16 +7,11 @@ mkdir -p $SYSTEM_MNT
 mkdir -p $CONFIG_MNT
 mkdir -p $DATA_MNT
 
-export
-
 # Mount filesystems
-mount $DISK_IMG -o,offset=${PART_START[2]},sizelimit=${PART_SIZE[2]} $ESP_MNT
-mount $DISK_IMG -o,offset=${PART_START[3]},sizelimit=${PART_SIZE[3]} $SYSTEM_MNT
-mount $DISK_IMG -o,offset=${PART_START[4]},sizelimit=${PART_SIZE[4]} $CONFIG_MNT
-mount $DISK_IMG -o,offset=${PART_START[5]},sizelimit=${PART_SIZE[5]} $DATA_MNT
+mount $ESP_DEV $ESP_MNT
+mount $SYSTEM_DEV $SYSTEM_MNT
+mount $CONFIG_DEV $CONFIG_MNT
+mount $DATA_DEV $DATA_MNT
 
 # Check what has been mounted recently
 mount | tail -n 4
-
-# Exports for other scripts
-export DISK_DEV

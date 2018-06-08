@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
         nano \
 	gdisk \
 	dosfstools \
+	kpartx \
 	&& rm -rf /var/lib/apt/lists/*
 
 CMD /imaginaryos-builder/build.sh
