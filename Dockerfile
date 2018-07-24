@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
         nano \
 	gdisk \
 	dosfstools \
+	grub-efi-amd64 \
 	kpartx \
 	&& rm -rf /var/lib/apt/lists/*
 
